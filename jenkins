@@ -14,7 +14,7 @@ pipeline {
             steps {
                 git(
                     branch: 'main',
-                    url: 'https://github.com/aditya-mohod/eks-terraform.git'
+                    url: 'https://github.com/aditya-mohod/ekd.git'
                 )
             }
         }
