@@ -1,11 +1,11 @@
-
+```groovy
 pipeline {
 
     agent any
 
     environment {
         AWS_DEFAULT_REGION = 'us-east-1'
-        AWS_REGION         = 'us-east-1'
+        AWS_REGION = 'us-east-1'
     }
 
     stages {
@@ -16,15 +16,6 @@ pipeline {
                     branch: 'main',
                     url: 'https://github.com/aditya-mohod/ekd.git'
                 )
-            }
-        }
-
-        stage('TERRAFORM VERSION') {
-            steps {
-                sh '''
-                    terraform version
-                    aws --version
-                '''
             }
         }
 
@@ -60,15 +51,5 @@ pipeline {
             }
         }
     }
-
-    post {
-        success {
-            echo 'EKS infrastructure created successfully!'
-        }
-
-        failure {
-            echo 'Pipeline failed. Check the stage logs.'
-        }
-    }
 }
-
+```
