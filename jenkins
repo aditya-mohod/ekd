@@ -12,7 +12,7 @@ stages {
     stage('PULL') {
         steps {
             git branch: 'main',
-                url: 'https://github.com/Bhagvat-tanwade/eks-infrastructure.git'
+                url: 'https://github.com/aditya-mohod/eks-terraform.git'
         }
     }
 
